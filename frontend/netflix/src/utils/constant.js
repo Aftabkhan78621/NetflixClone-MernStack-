@@ -1,4 +1,5 @@
-export const API_END_POINT = "http://localhost:8000/api/v1/user";
+export const API_END_POINT = "https://cinestream-da71.onrender.com";
+// http://localhost:8000/api/v1/user
 
 export const options = {
   method: "GET",
@@ -11,12 +12,8 @@ export const options = {
 
 export const NewPlaylistAPi = "https://api.themoviedb.org/3/movie/now_playing";
 export const NewPopular = "https://api.themoviedb.org/3/movie/popular";
-
 export const top_rated = "https://api.themoviedb.org/3/movie/top_rated";
 export const upComing = "https://api.themoviedb.org/3/movie/upcoming";
-
 export const Banner_url = "https://image.tmdb.org/t/p/w500";
-
-
-export const SEARCH_MOVIE_URL = 'https://api.themoviedb.org/3/search/movie?query=';
-
+export const SEARCH_MOVIE_URL =
+  "https://api.themoviedb.org/3/search/movie?query=";
