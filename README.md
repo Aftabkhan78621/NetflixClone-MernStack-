@@ -69,7 +69,7 @@ routes/: Defines the API paths (e.g., /api/v1/user/login)
 
 🔗 Live Links & Documentation
 
-Live Demo: [Insert Vercel/Netlify Link Here]
+Live Demo: [https://netflix-clone-mern-stack-d6sf.vercel.app/]
 
 Backend API: [https://cinestream-da71.onrender.com]
 
@@ -90,3 +90,4 @@ TMDB_TOKEN=your_bearer_token
 3.Start Developing:
 # Root folder
 npm run dev
+
