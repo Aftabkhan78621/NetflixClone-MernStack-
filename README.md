@@ -1,4 +1,4 @@
-🎬 CineStream: A Premium Full-Stack Streaming Platform
+🎬 NETFLIX : A Premium Full-Stack Streaming Platform
 CineStream is a high-performance MERN stack application designed to provide a seamless movie browsing experience. It features real-time data synchronization with the TMDB API, centralized state management using Redux Toolkit, and a secure, custom-built backend for user authentication and data persistence.
 
 🛠️ Tech Stack & Tools
@@ -90,4 +90,5 @@ TMDB_TOKEN=your_bearer_token
 3.Start Developing:
 # Root folder
 npm run dev
+
 
