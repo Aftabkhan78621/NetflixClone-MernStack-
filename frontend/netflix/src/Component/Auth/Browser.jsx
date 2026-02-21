@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import useNowPlayingMovies from '../../hooks/useNewPlayingMovie'
 import useNewPopularMovie from '../../hooks/useNewPopularMovie'
 import useTopRated from '../../hooks/useTopRated'
-import useUpComing from '../../hooks/useupComing'
+import useUpComing from '../../hooks/useUpComing'
 import Header from "../Header/Header"
 import MainContainer from '../Movies/MainContainer'
 import MainMovie from '../Movies/MainMovieContainer/MainMovie'
