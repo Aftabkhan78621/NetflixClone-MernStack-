@@ -1,65 +1,92 @@
-﻿# NetflixClone-MernStack-
- 🎬 Netflix-Stream: A Secure Full-Stack Media Discovery Platform
-Netflix-Stream ek robust MERN (MongoDB, Express, React, Node) application hai jo real-time entertainment data aur secure user management ko handle karta hai. Is project mein sophisticated TMDB API integration aur custom Authentication logic ka use kiya gaya hai.
+🎬 CineStream: A Premium Full-Stack Streaming Platform
+CineStream is a high-performance MERN stack application designed to provide a seamless movie browsing experience. It features real-time data synchronization with the TMDB API, centralized state management using Redux Toolkit, and a secure, custom-built backend for user authentication and data persistence.
 
-🛠️ Key Technical Implementations
-1. Real-time Data Integration (TMDB API)
-Multi-Category Fetching: now_playing, popular, top_rated, aur upcoming endpoints ka use karke dynamic content deliver kiya gaya hai.
+🛠️ Tech Stack & Tools
+Frontend
+React.js & React Router DOM: For building a dynamic and responsive Single Page Application (SPA).
 
-Optimized Image Rendering: TMDB ki w500 poster image service ka use karke UI load time ko optimize kiya gaya hai.
+Redux Toolkit: Used for global state management (User auth, Movie data, and Watchlist).
 
-Dynamic Search: Implement kiya gaya SEARCH_MOVIE_URL taaki users hazaron titles mein se instantly search kar sakein.
+React Icons: For a clean and modern user interface.
 
-2. Full-Stack Authentication & Security
-Backend API Architecture: Ek custom RESTful API design kiya gaya hai (/api/v1/user) jo signup, login aur user sessions ko manage karta hai.
+Axios: For handling asynchronous API calls to the backend and TMDB.
 
-Secure Authorization: TMDB requests ke liye Bearer Token authentication aur backend ke liye JWT ka use kiya gaya hai.
+Tailwind CSS / Styled Components: For a premium, Netflix-inspired UI.
 
-CORS Management: Frontend (React) aur Backend (Node/Express) ke beech secure communication ke liye CORS (Cross-Origin Resource Sharing) configuration ka use kiya gaya hai.
+Backend
+Node.js & Express.js: To handle RESTful API endpoints and middleware.
 
-3. Database Management
-MongoDB & Mongoose: Users ka sensitive data aur preferences ko store karne ke liye schema-based NoSQL database ka use kiya gaya hai.
+MongoDB & Mongoose: For storing user data, encrypted passwords, and personalized watchlists.
 
-Layer,Technology,Key Usage
-Frontend,React.js,"Dynamic UI, Hooks (useEffect, useState), Virtual DOM."
-Backend,Node.js & Express,"Handling API endpoints, Middleware, Business logic."
-Database,MongoDB,"Storing user profiles, watchlists, and secure credentials."
-Integration,Axios & TMDB API,Fetching real-time media metadata.
-Security,JWT & Bcrypt,Password encryption and session management.
+JWT (JSON Web Tokens): For secure, stateless user authentication.
 
-🚀 Impact & Learning (For Interviews)
-Problem Solving: Localhost environment aur external APIs ke beech CORS issues ko handle kiya.
+Bcrypt.js: For high-level password hashing and security.
 
-Security First: Environment variables (.env) ka use karke API keys aur database credentials ko secure rakha.
+CORS: Configured for secure cross-origin communication between Frontend and Backend.
 
-Scalability: Project ko modular structure mein divide kiya (separate constant.js for endpoints) taaki future mein naye features easily add ho sakein.
+🚀 Key Features & Logic
+1. Advanced State Management (Redux)
+The app uses Redux Toolkit to manage complex states. This ensures that user data and movie lists are available across all components without "prop drilling," making the app faster and more scalable.
 
-📂 How to Setup
-Clone & Install:
-git clone [your-repo-link]
+2. TMDB API Integration
+I implemented dynamic endpoints to fetch:
+
+Hero Banner: Random trending movie on every refresh.
+
+Categorized Rows: Now Playing, Popular, Top Rated, and Upcoming.
+
+Search Engine: Real-time movie filtering based on user input.
+
+3. Custom Authentication System
+Instead of using third-party auth, I built a custom JWT-based system:
+
+Controllers: Separate logic for login, register, and profile.
+
+Routes: Protected routes that only allow logged-in users to access the Watchlist.
+
+4. Scalable Backend Structure
+The backend follows the MVC (Model-View-Controller) pattern:
+
+models/: Defines the data structure (User Schema).
+
+controllers/: Contains the business logic for each request.
+
+routes/: Defines the API paths (e.g., /api/v1/user/login)
+
+📂 Project Structure
+├── client (Frontend)
+│   ├── src
+│   │   ├── redux/       # Store, Slices (userSlice, movieSlice)
+│   │   ├── components/  # Navbar, MovieCard, Row, Hero
+│   │   ├── hooks/       # Custom hooks for API calls
+│   │   └── constants/   # TMDB and Backend API Endpoints
+│
+└── server (Backend)
+    ├── models/          # MongoDB Schemas
+    ├── controllers/     # Logic for Auth and Watchlist
+    ├── routes/          # Express Route definitions
+    └── middleware/      # Auth verification logic
+
+🔗 Live Links & Documentation
+
+Live Demo: [Insert Vercel/Netlify Link Here]
+
+Backend API: [https://cinestream-da71.onrender.com]
+
+API Documentation: [[Insert Postman or GitHub Wiki Link](https://web.postman.co/workspace/Personal-Workspace~3cb024d2-5176-4f92-ac21-1c6474d0debb/collection/42394456-a4cd0c5a-d6d8-4485-b916-8e9617431a55?action=share&source=copy-link&creator=42394456)]
+
+⚙️ Installation
+1.Clone & Install:
+git clone https://github.com/yourusername/cinestream.git
 npm install && cd client && npm install
 
-Environment Configuration:
-Create a .env file in the root:
-
+2.Environment Setup:
+Create a .env file in the server directory:
 PORT=8000
-MONGO_URI=your_mongodb_connection
-TMDB_BEARER_TOKEN=your_token
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret_key
+TMDB_TOKEN=your_bearer_token
 
-Run the App:
-# Server (Port 8000)
+3.Start Developing:
+# Root folder
 npm run dev
-# Frontend
-cd client && npm start
-
-🔗 Live Links
-Frontend (Live): https://your-netflix-clone.vercel.app (Vercel ya Netlify ka link yahan dalein)
-Backend API: https://your-api.onrender.com (Render ya Railway ka link yahan dalein)
-Database: Hosted on MongoDB Atlas
-
-🚀 Deployment Details
-Maine is project ko cloud platforms par deploy kiya hai taaki ye real-world environment mein run ho sake:
-Frontend: Hosted on Vercel/Netlify for high-speed content delivery.
-Backend: Node.js server hosted on Render/Railway, managing all API requests.
-Environment Security: Saari sensitive keys (TMDB Token, MongoDB URI, JWT Secret) ko Environment Variables ke throw handle kiya gaya hai taaki security bani rahe.
-
