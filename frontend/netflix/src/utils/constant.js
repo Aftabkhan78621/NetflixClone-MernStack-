@@ -1,4 +1,4 @@
-export const API_END_POINT = "https://cinestream-da71.onrender.com";
+export const API_END_POINT = "https://cinestream-da71.onrender.com/api/v1/user";
 // http://localhost:8000/api/v1/user
 
 export const options = {
