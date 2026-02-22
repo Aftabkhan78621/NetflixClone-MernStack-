@@ -15,11 +15,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 const corsOptions = {
-  origin: ["https://netflix-clone-mern-stack-d6sf.vercel.app",
-    "https://netflix-clone-mern-stack-gd5u.vercel.app",
-    "http://localhost:5173"],
+  // origin: "https://netflix-clone-mern-stack-ck54.vercel.app", // Strictly no trailing slash
+   origin: "*",
   credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"]
 };
 app.use(cors(corsOptions));
 
